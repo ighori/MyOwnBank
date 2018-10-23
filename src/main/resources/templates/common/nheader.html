@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:fragment="common-header">
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>My Own Bank</title>
+ 
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic" rel="stylesheet"/>
+
+    <!-- STYLESHEETS -->
+    <style type="text/css">
+            [fuse-cloak],
+            .fuse-cloak {
+                display: none !important;
+            }
+        </style>
+    <!-- Icons.css -->
+    <link type="text/css" rel="stylesheet" href="/assets/icons/fuse-icon-font/style.css"/>
+    <!-- Animate.css -->
+    <link type="text/css" rel="stylesheet" href="/assets/vendor/animate.css/animate.min.css"/>
+    <!-- PNotify -->
+    <link type="text/css" rel="stylesheet" href="/assets/vendor/pnotify/pnotify.custom.min.css"/>
+    <!-- Nvd3 - D3 Charts -->
+    <link type="text/css" rel="stylesheet" href="/assets/vendor/nvd3/build/nv.d3.min.css" />
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" rel="stylesheet" href="/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+    <!-- Fuse Html -->
+    <link type="text/css" rel="stylesheet" href="/assets/vendor/fuse-html/fuse-html.min.css" />
+    <!-- Main CSS -->
+    <link type="text/css" rel="stylesheet" href="/assets/css/main.css"/>
+    <!-- / STYLESHEETS -->
+
+    <!--<script type="text/javascript" src="https://canvasjs.com/assets//js/canvasjs.min.js"></script>-->
+
+    <script type="text/javascript">(function() {var walkme = document.createElement('script'); walkme.type = 'text/javascript'; walkme.async = true; walkme.src = 'https://cdn.walkme.com/users/19b5ebd343e3405a863f655c569467e1/test/walkme_19b5ebd343e3405a863f655c569467e1_https.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(walkme, s); window._walkmeConfig = {smartLoad:true}; })();</script>
+</head>
+<body>
+
+<!-- Header 0 -->
+             <aside th:fragment="header0" id="aside" class="aside aside-left" data-fuse-bar="aside" data-fuse-bar-media-step="md" data-fuse-bar-position="left">
+                <div class="aside-content-wrapper">
+
+                    <div class="aside-content bg-primary-700 text-auto">
+
+                        <div class="aside-toolbar">
+
+                            <div class="logo">
+                                <span class="logo-icon">IB</span>
+                                <span class="logo-text">My Own Bank</span>
+                            </div>
+
+                            <button id="toggle-fold-aside-button" type="button" class="btn btn-icon d-none d-lg-block" data-fuse-aside-toggle-fold="aside">
+                                <i class="icon icon-backburger"></i>
+                            </button>
+
+                        </div>
+
+                        <ul class="nav flex-column custom-scrollbar" id="sidenav" data-children=".nav-item">
+
+                            <li class="subheader">
+                                <span>MENU</span>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link ripple " th:href="@{/home}" data-url="home.html" id="home">
+                                    <i class="icon s-4 icon-home"></i>
+
+                                    <span>Home</span>
+                                </a>
+                            </li>							
+							
+                            <li class="subheader">
+                                <span>ACCOUNTS</span>
+                            </li>							
+							
+                            <li class="nav-item" role="tab" id="heading-ecommerce">
+
+                                <a class="nav-link ripple with-arrow collapsed" data-toggle="collapse" data-target="#collapse-ecommerce" href="#" aria-expanded="false" aria-controls="collapse-ecommerce">
+
+                                    <i class="icon s-4 icon-account-card-details"></i>
+
+                                    <span>Accounts List</span>
+                                </a>
+                                <ul id="collapse-ecommerce" class='collapse ' role="tabpanel" aria-labelledby="heading-ecommerce" data-children=".nav-item">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " th:href="@{/account/primaryAccount}" id= "currentAccount" data-url="home.html">
+
+                                            <span>Current</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " th:href="@{/account/savingsAccount}" id="savingsAccount" data-url="home.html">
+
+                                            <span>Savings</span>
+                                        </a>
+                                    </li>	
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " th:href="@{/account/creditAccount}" id="creditAccount" data-url="home.html">
+
+                                            <span>Credit Card</span>
+                                        </a>
+                                    </li>	
+									
+                                </ul>
+                            </li>
+                            <li class="nav-item" role="tab" id="heading-acctmgmt">
+
+                                <a class="nav-link ripple with-arrow collapsed" data-toggle="collapse" data-target="#collapse-acctmgmt" href="#" aria-expanded="false" aria-controls="collapse-acctmgmt">
+
+                                    <i class="icon s-4 icon-arrange-send-to-back"></i>
+
+                                    <span>Manage</span>
+                                </a>
+                                <ul id="collapse-acctmgmt" class='collapse ' role="tabpanel" aria-labelledby="heading-acctmgmt" data-children=".nav-item">
+                                     <li class="nav-item">
+                                        <a class="nav-link ripple " id="cardPayment" th:href="@{/account/cardPayment}" data-url="home.html">
+
+                                            <span>Card Payment</span>
+                                        </a>
+                                    </li>
+                                     <li class="nav-item">
+                                        <a class="nav-link ripple " th:href="@{/account/deposit}" id="depositMenu" data-url="home.html">
+
+                                            <span>Deposit</span>
+                                        </a>
+                                    </li>								
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " th:href="@{/account/withdraw}" id="withdrawMenu" data-url="home.html">
+
+                                            <span>Withdraw</span>
+                                        </a>
+                                    </li>									
+
+                                </ul>
+                            </li>															
+                            <li class="subheader">
+                                <span>TRANSFERS</span>
+                            </li>
+
+                            <li class="nav-item" role="tab" id="heading-transfer">
+
+                                <a class="nav-link ripple with-arrow collapsed" id="transfer" data-toggle="collapse" data-target="#collapse-transfer" href="#" aria-expanded="false" aria-controls="collapse-transfer">
+
+                                    <i class="icon s-4 icon-transfer"></i>
+
+                                    <span>Transfer</span>
+                                </a>
+                                <ul id="collapse-transfer" class='collapse ' role="tabpanel" aria-labelledby="heading-transfer" data-children=".nav-item">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="betweenAccounts" th:href="@{/transfer/betweenAccounts}" data-url="betweenAccounts.html">
+
+                                            <span>Between Accounts</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="payOthers" th:href="@{/transfer/toOthers}" data-url="toOthers.html">
+                                            <span>Pay Others</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="billPayment" th:href="@{/account/savingsAccount}" data-url="savingsAccount.html">
+
+                                            <span>Bill Payment</span>
+                                        </a>
+                                    </li>
+									
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="manageRecipients" th:href="@{/transfer/recipient}" data-url="recipient.html">
+                                            <span>Manage Recipients</span>
+                                        </a>
+                                    </li>									
+                                </ul>
+                            </li>
+
+                            <li class="subheader">
+                                <span>SERVICES</span>
+                            </li>
+
+                            <li class="nav-item" role="tab" id="heading-services">
+
+                                <a class="nav-link ripple with-arrow collapsed" data-toggle="collapse" data-target="#collapse-services" href="#" aria-expanded="false" aria-controls="collapse-services">
+
+                                    <i class="icon s-4 icon-layers"></i>
+
+                                    <span>Services</span>
+                                </a>
+                                <ul id="collapse-services" class='collapse ' role="tabpanel" aria-labelledby="heading-services" data-children=".nav-item">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="newLoanApplicaiton" th:href="@{/appointment/loanApplication}" data-url="loanApplication">
+
+                                            <span>New Loan Application</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="newCreditCard" th:href="@{/appointment/ccApplication}" data-url="ccApplication.html">
+
+                                            <span>Apply for New Credit Card</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link ripple " id="bookAppointment" th:href="@{/appointment/create}" data-url="create.html">
+
+                                            <span>Book an Appointment</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+<!-- / Header -->
+
+
+<!-- Header 1 -->
+
+<div th:fragment="header1">
+
+<nav id="toolbar" class="bg-white">
+
+    <div class="row no-gutters align-items-center flex-nowrap">
+
+        <div class="col">
+
+            <div class="row no-gutters align-items-center flex-nowrap">
+
+                <button type="button" class="toggle-aside-button btn btn-icon d-block d-lg-none" data-fuse-bar-toggle="aside">
+                    <i class="icon icon-menu"></i>
+                </button>
+
+                <div class="toolbar-separator d-block d-lg-none"></div>
+
+                <div class="shortcuts-wrapper row no-gutters align-items-center px-0 px-sm-2">
+
+                    <div class="shortcuts row no-gutters align-items-center d-none d-md-flex">
+
+                        <a th:href="@{/user/profile}" class="shortcut-button btn btn-icon mx-1">
+                            <i class="icon icon-account-box"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="toolbar-separator"></div>
+
+            </div>
+        </div>
+
+        <div class="col-auto">
+
+            <div class="row no-gutters align-items-center justify-content-end">
+
+                <div class="user-menu-button dropdown">
+
+                    <div class="dropdown-toggle ripple row align-items-center no-gutters px-2 px-sm-4" role="button" id="dropdownUserMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-wrapper">
+                            <img class="avatar" src="/assets/images/avatars/profile.jpg"/>
+                            <i class="status text-green icon-checkbox-marked-circle s-4"></i>
+                        </div>
+                        <span class="username mx-3 d-none d-md-block"><span th:text="${user.firstName}"></span> <span th:text="${user.lastName}"></span></span>
+                    </div>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownUserMenu">
+
+                        <a class="dropdown-item" th:href="@{/user/profile}">
+                            <div class="row no-gutters align-items-center flex-nowrap">
+                                <i class="icon-account"></i>
+                                <span class="px-3">My Profile</span>
+                            </div>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+
+                        <a class="dropdown-item" th:href="@{/logout}">
+                            <div class="row no-gutters align-items-center flex-nowrap">
+                                <i class="icon-logout"></i>
+                                <span class="px-3">Logout</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+<!-- / Header 1 -->
+
+<!-- Header 2 -->
+
+<div th:fragment="header2">
+ 
+     <div class="page-header bg-secondary text-auto d-flex flex-column justify-content-between px-6 pt-4 pb-0">
+
+        <div class="row no-gutters align-items-start justify-content-between flex-nowrap">
+
+            <div>
+                <span class="h2">Welcome back, <span th:text="${user.firstName}"></span>!</span>
+            </div>
+
+            <button type="button" class="sidebar-toggle-button btn btn-icon d-block d-xl-none" data-fuse-bar-toggle="dashboard-project-sidebar" aria-label="Toggle sidebar">
+                <i class="icon icon-menu"></i>
+            </button>
+        </div>
+    </div>
+ 
+</div>
+
+<!-- / Header 2 -->
+
+<div th:fragment="body-bottom-scripts">
+ 
+     <!-- JAVASCRIPT -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <!-- Mobile Detect -->
+    <script type="text/javascript" src="/assets/vendor/mobile-detect/mobile-detect.min.js"></script>
+    <!-- Perfect Scrollbar -->
+    <script type="text/javascript" src="/assets/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script type="text/javascript" src="/assets/vendor/popper.js/index.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <!-- Nvd3 - D3 Charts -->
+    <script type="text/javascript" src="/assets/vendor/d3/d3.min.js"></script>
+    <script type="text/javascript" src="/assets/vendor/nvd3/build/nv.d3.min.js"></script>
+    <script type="text/javascript" src="/assets/js/components/charts/nvd3.js"></script>
+    <!-- Data tables -->
+    <script type="text/javascript" src="/assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/assets/vendor/datatables-responsive/js/dataTables.responsive.js"></script>
+    <!-- PNotify -->
+    <script type="text/javascript" src="/assets/vendor/pnotify/pnotify.custom.min.js"></script>
+    <!-- Fuse Html -->
+    <script type="text/javascript" src="/assets/vendor/fuse-html/fuse-html.min.js"></script>
+    <!-- Main JS -->
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <!-- / JAVASCRIPT -->
+</div>
+
+</body>
+</html>

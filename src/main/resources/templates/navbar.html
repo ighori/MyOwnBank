@@ -1,0 +1,69 @@
+<!-- Navigation -->
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>My Own Bank</h3>
+                </div>
+
+               <ul class="list-unstyled components">
+		<li class="active"><a th:href="@{/home}">Home</a></li>
+                    <li>
+                        <a href="#acctSubmenu" data-toggle="collapse" aria-expanded="false">Accounts</a>
+                        <ul class="collapse list-unstyled" id="acctSubmenu">
+                            <li><a th:href="@{/account/primaryAccount}">Current</a></li>
+                            <li><a th:href="@{/account/savingsAccount}">Savings</a></li>
+                 	</ul>
+                    </li>
+                    <li>
+                        <a href="#trsfSubmenu" data-toggle="collapse" aria-expanded="false">Transfer</a>
+                        <ul class="collapse list-unstyled" id="trsfSubmenu">
+                        <li><a th:href="@{/transfer/betweenAccounts}">Transfer between Accounts</a></li>
+                        <li><a th:href="@{/transfer/toOthers}">Transfer to Others</a></li>
+			<li><a th:href="@{/transfer/recipient}">Manage Recipients</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#srvsSubmenu" data-toggle="collapse" aria-expanded="false">Services</a>
+                        <ul class="collapse list-unstyled" id="srvsSubmenu">
+                        <li><a th:href="@{/appointment/loanapplication}">New Loan Application</a></li>
+                        <li><a th:href="@{/appointment/loanapplication}">Apply for New Credit Card</a></li>
+			<li><a th:href="@{/appointment/create}">Book an Appointment</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a th:href="@{/user/profile}">Profile Settings</a></li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="navbar-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Me <span></span></a>
+				<ul class="dropdown-menu">
+				<li><a th:href="@{/user/profile}">Profile</a></li>
+				<li><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+				</li>
+				</ul>
+                        </div>
+                    </div>
+                </nav>
+</div>
+

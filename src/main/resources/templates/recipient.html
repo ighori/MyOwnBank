@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+ function startTxnSuccess(){
+           var event = {"transactionName" : "Manage Recipients","serviceName" : "Recipients"};
+          BrowserAgentExtension.startApplicationTransaction(event);
+        }
+function endTxnSuccess(){
+		var event = {"transactionName" : "Manage Recipients","serviceName" : "Recipients"};
+		BrowserAgentExtension.stopApplicationTransaction(event);
+}
+</script>
+<head th:replace="common/nheader :: common-header"/>
+<body class="layout layout-vertical layout-left-navigation layout-below-toolbar">
+    <main>
+        <div id="wrapper">
+        
+          <!-- HEADER 0 -->
+ 
+          <head th:replace="common/nheader :: header0"/>
+           
+          <!-- / HEADER 0 -->
+            
+            <!-- HEADER 1 -->
+            
+            <div class="content-wrapper">
+            		
+			<head th:replace="common/nheader :: header1"/>
+                
+             <!-- / HEADER 1 -->
+                
+             <!-- HEADER 2 -->
+                
+                <div class="content custom-scrollbar">
+
+                    <div id="project-dashboard" class="page-layout simple right-sidebar">
+
+                        <div class="page-content-wrapper custom-scrollbar">
+
+							<head th:replace="common/nheader :: header2"/>
+
+             <!-- / HEADER 2 -->
+
+                            <!-- CONTENT -->
+                            <div class="page-content">                            
+                        <div class="page-content p-6">
+                            <div class="content container">
+                                <div class="row">
+
+                                    <!-- FORM CONTROLS -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="example">
+                                            <div class="description">
+                                                <div class="description-text">
+                                                    <h3>Recipient Information</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="source-preview-wrapper">
+                                                <div class="preview">
+                                                    <div class="preview-elements">
+                                                        <form th:action="@{/transfer/recipient/save}" method="post">
+														<input type="hidden" name="id" th:value="${recipient.id}" />
+
+														<div class="form-group">
+															<label for="recipientName">Name</label>
+															<input type="text" class="form-control" th:value="${recipient.name}" name="name"
+																   id="recipientName" placeholder="Name"/>
+														</div>
+														<div class="form-group">
+															<label for="recipientEmail">Email</label>
+															<input type="email" class="form-control" th:value="${recipient.email}" name="email"
+																   id="recipientEmail" placeholder="Email"/>
+														</div>
+														<div class="form-group">
+															<label for="recipientPhone">Phone</label>
+															<input type="text" class="form-control" th:value="${recipient.phone}" name="phone"
+																   id="recipientPhone" placeholder="Phone"/>
+														</div>
+														<div class="form-group">
+															<label for="recipientAccountNumber">Account Number</label>
+															<input type="text" class="form-control" th:value="${recipient.accountNumber}"
+																   name="accountNumber" id="recipientAccountNumber" placeholder="Account Number"/>
+														</div>
+														<div class="form-group">
+															<label for="recipientDescription">Description</label>
+															<textarea class="form-control" th:value="${recipient.description}" name="description"
+																	  id="recipientDescription" placeholder="Description" th:text="${recipient.description}"></textarea>
+														</div>
+
+														<input type="hidden"
+															   name="${_csrf.parameterName}"
+															   value="${_csrf.token}"/>
+															<button class="btn btn-primary" type="submit" name="submit">Add/Edit Recipient</button>
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+                                                </div>										
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / FORM CONTROLS -->							
+								</div>
+								
+								          <div class="col-12 col-lg-12 p-3">
+									      <div class="widget card">
+                                           <div class="widget-header row no-gutters align-items-center justify-content-between">
+								
+													<table id="example" class="table table-hover table-bordered center-aligned-table">
+													<thead>
+													<tr>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Recipient Name</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Email</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Phone</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Account Number</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Description</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title"></span>
+													</div>
+													</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-th-each="eachRecipient : ${recipientList}">
+														<td><a data-th-text="${eachRecipient.name}" th:href="@{/transfer/recipient/edit?recipientName=}+${eachRecipient.name}">...</a></td>
+														<td data-th-text="${eachRecipient.email}">...</td>
+														<td data-th-text="${eachRecipient.phone}">...</td>
+														<td data-th-text="${eachRecipient.accountNumber}">...</td>
+														<td data-th-text="${eachRecipient.description}">...</td>
+														<td><a th:href="@{/transfer/recipient/delete?recipientName=}+${eachRecipient.name}">delete</a></td>
+													</tr>
+													</tbody>
+													</table>													
+                                                    </div>
+
+                                                </div>
+												</div>	
+						</div>
+					</div>
+                   <!-- / CONTENT -->                                   
+				</div>                            
+                </div>
+            </div>
+		</div>
+	</div>
+
+    </main>
+
+<!-- / Navigation -->
+<div th:replace="common/nheader :: body-bottom-scripts"/>
+
+</body>
+<script>
+    $(document).ready(function() {
+	 $('#sidebarCollapse').on('click', function () {
+		 $('#sidebar').toggleClass('active');
+		 $(this).toggleClass('active');
+	 });
+	startTxnSuccess();
+        $('#example2').DataTable();
+	endTxnSuccess();
+    } );
+</script>
+
+<script type="text/javascript">
+//$(document).ready( function(){
+// $("#home").removeClass("active");
+//});
+$(document).ready( function(){
+$("#collapse-transfer").addClass("collapse show");
+});
+
+$(document).ready( function(){
+$("#manageRecipients").addClass("active");
+});
+</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+function startTxnSuccess(){
+           var event = {"transactionName" : "Payments","serviceName" : "PaymentTransfer"};
+          BrowserAgentExtension.startApplicationTransaction(event);
+        }
+function endTxnSuccess(){
+		var event = {"transactionName" : "Payments","serviceName" : "PaymentTransfer"};
+		BrowserAgentExtension.stopApplicationTransaction(event);
+}
+ 
+function endTxnFail(){
+	var amount = document.getElementById("amount").value;
+        var event = {"transactionName" : "Payments","serviceName" : "PaymentTransfer" , "failure": "Service Error","attributes" : { "Amount" : amount }};
+                BrowserAgentExtension.stopApplicationTransaction(event);
+        }
+
+
+
+function getTAmount(){
+	var amount = document.getElementById("amount").value;
+	var event = {"type": "string" , "key" : "tAmount","value": amount };
+	BrowserAgentExtension.logTextMetric(event);
+	
+}
+function getSAmount(){
+	var amount = document.getElementById("amount").value;
+	var event = {"type": "string" , "key" : "sAmount","value": amount };
+	BrowserAgentExtension.logTextMetric(event);
+}
+function getFAmount(){
+	var amount = document.getElementById("amount").value;
+	var event = {"type": "string" , "key" : "fAmount","value": amount };
+	BrowserAgentExtension.logTextMetric(event);
+}
+function getType(){
+	var accounttype = document.getElementById("accountType").value;
+	var event = {"type": "string" , "key" : "PaymentType","value": accounttype };
+	BrowserAgentExtension.logTextMetric(event);
+}
+</script>
+<head th:replace="common/nheader :: common-header"/>
+<body class="layout layout-vertical layout-left-navigation layout-below-toolbar">
+    <main>
+        <div id="wrapper">
+        
+          <!-- HEADER 0 -->
+ 
+          <head th:replace="common/nheader :: header0"/>
+           
+          <!-- / HEADER 0 -->
+            
+            <!-- HEADER 1 -->
+            
+            <div class="content-wrapper">
+            		
+			<head th:replace="common/nheader :: header1"/>
+                
+             <!-- / HEADER 1 -->
+                
+             <!-- HEADER 2 -->
+                
+                <div class="content custom-scrollbar">
+
+                    <div id="project-dashboard" class="page-layout simple right-sidebar">
+
+                        <div class="page-content-wrapper custom-scrollbar">
+
+							<head th:replace="common/nheader :: header2"/>
+
+             <!-- / HEADER 2 -->
+
+                            <!-- CONTENT -->
+                            <div class="page-content">                            
+                        <div class="page-content p-6">
+                            <div class="content container">
+                                <div class="row">
+
+                                    <!-- FORM CONTROLS -->
+                                    <div class="col-12 col-md-6">
+                                        <div class="example">
+                                            <div class="description">
+                                                <div class="description-text">
+                                                    <h3>Credit Card Payment</h3>
+                                                </div>
+                                            </div>
+
+                                            <div class="source-preview-wrapper">
+                                                <div class="preview">
+                                                    <div class="preview-elements">
+                                                        <form th:action="@{/account/cardPayment}" method="post">
+															<input type="hidden" id="accountType" name="accountType" th:value="${accountType}" value="Credit" />                                                            
+                                                            <div class="form-group">
+                                                                <input th:value="${amount}" type="text" name="amount" id="amount" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Amount $"/>
+                                                                <label for="amount">Please specify the amount:</label>
+                                                            </div>
+															<button class="btn btn-primary" type="submit" name="submit" onclick="getTAmount();getSAmount();getType();endTxnSuccess();">Submit</button>
+															<button class="btn btn-default" type="submit" name="reset" onclick="getTAmount();getFAmount();getType();endTxnFail();">Reset</button>
+                                                            
+                                                        </form>
+
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / FORM CONTROLS -->							
+								</div>
+						</div>
+					</div>
+                   <!-- / CONTENT -->                                   
+				</div>                            
+                </div>
+            </div>
+		</div>
+	</div>
+
+    </main>
+
+<!-- / Navigation -->
+<div th:replace="common/nheader :: body-bottom-scripts"/>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+	 $('#sidebarCollapse').on('click', function () {
+		 $('#sidebar').toggleClass('active');
+		 $(this).toggleClass('active');
+	 });
+    startTxnSuccess();
+});
+</script>
+<script type="text/javascript">
+//$(document).ready( function(){
+// $("#home").removeClass("active");
+//});
+$(document).ready( function(){
+$("#collapse-acctmgmt").addClass("collapse show");
+});
+
+$(document).ready( function(){
+$("#cardPayment").addClass("active");
+});
+</script>
+</html>

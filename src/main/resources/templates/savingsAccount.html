@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+ function startTxnSuccess(){
+           var event = {"transactionName" : "Transaction History","serviceName" : "TransactionSearch"};
+          BrowserAgentExtension.startApplicationTransaction(event);
+        }
+function endTxnSuccess(){
+		var event = {"transactionName" : "Transaction History","serviceName" : "TransactionSearch"};
+		BrowserAgentExtension.stopApplicationTransaction(event);
+}
+</script>
+<head th:replace="common/nheader :: common-header"/>
+<body class="layout layout-vertical layout-left-navigation layout-below-toolbar">
+    <main>
+        <div id="wrapper">
+        
+          <!-- HEADER 0 -->
+ 
+          <head th:replace="common/nheader :: header0"/>
+           
+          <!-- / HEADER 0 -->
+            
+            <!-- HEADER 1 -->
+            
+            <div class="content-wrapper">
+            		
+			<head th:replace="common/nheader :: header1"/>
+                
+             <!-- / HEADER 1 -->
+                
+             <!-- HEADER 2 -->
+                
+                <div class="content custom-scrollbar">
+
+                    <div id="project-dashboard" class="page-layout simple right-sidebar">
+
+                        <div class="page-content-wrapper custom-scrollbar">
+
+							<head th:replace="common/nheader :: header2"/>
+
+             <!-- / HEADER 2 -->
+
+                            <!-- CONTENT -->
+                            <div class="page-content">                            
+                            
+                                                                    <!-- WIDGET GROUP -->
+                                        <div class="widget-group row no-gutters">
+
+                                            <!-- WIDGET 1 -->
+                                            <div class="col-12 col-sm-6 col-xl-4 p-4">
+
+                                                <div class="widget widget1 card">
+
+                                                    <div class="widget-header pl-4 pr-2 row no-gutters align-items-center justify-content-between">
+
+                                                        <div class="col">
+                                                            <span class="h6">Savings Account</span>
+                                                        </div>
+ 
+                                                    </div>
+
+                                                    <div class="widget-content pt-2 pb-8 d-flex flex-column align-items-center justify-content-center">
+                                                        <div class="title text-warning"><h1 class="display-2"><span th:text="${savingsAccount.accountBalance}"></span></h1></div>
+                                                        <div class="sub-title h6 text-muted">AUD $</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <!-- / WIDGET 1 -->											
+											
+                                            <!-- WIDGET 2 -->
+                                   
+
+                                            <div class="col-12 col-lg-12 p-3">
+
+                                                <div class="widget widget6 card">
+
+                                                    <div class="widget-header px-4 row no-gutters align-items-center justify-content-between">
+
+                                                        <div class="col">
+                                                            <span class="h6">Usage History</span>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="widget-content">
+
+                                                        <div class="row no-gutters">
+
+                                                            <div class="col-12">
+
+                                                                <div id="stacked-area-chart" class="p-4" style="height: 350px">
+                                                                    <svg></svg>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- / WIDGET 6 -->
+                                    
+											
+                                       <div class="col-12 p-3">
+									      <div class="widget widget-7 card">
+                                                    <div class="widget-header px-4 row no-gutters align-items-center justify-content-between">
+
+													<div class="h5 mb-3">Transactions</div>
+                                                    </div>
+
+                                            <div class="source-preview-wrapper">
+                                                <div class="preview">
+                                                    <div class="preview-elements">
+
+													<table id="example" class="table table-hover table-bordered center-aligned-table">
+													<thead>
+													<tr>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Post Date</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Description</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Type</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Status</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Amount</span>
+													</div>
+													</th>
+													<th class="secondary-text">
+													<div class="table-header">
+													<span class="column-title">Available Balance</span>
+													</div>
+													</th>
+													</tr>
+													</thead>
+													<tbody>
+													<tr data-th-each="savingsTransaction : ${savingsTransactionList}">
+													<td data-th-text="${savingsTransaction.date}">...</td>
+													<td data-th-text="${savingsTransaction.description}">...</td>
+													<td data-th-text="${savingsTransaction.type}">...</td>
+													<td data-th-text="${savingsTransaction.status}">...</td>
+													<td data-th-text="${savingsTransaction.amount}">...</td>
+													<td data-th-text="${savingsTransaction.availableBalance}">...</td>
+													</tr>
+													</tbody>
+													</table>													
+                                                    </div>
+                                                </div>
+												</div>
+                                            </div>
+
+                                        </div>
+											
+                                        </div>
+                                        <!-- / WIDGET GROUP -->	
+                            
+							</div>                            
+                            <!-- / CONTENT -->                            
+                            
+                </div>
+            </div>
+		</div>
+	</div>
+
+    	</div>
+    </main>
+
+<!-- / Navigation -->
+<div th:replace="common/nheader :: body-bottom-scripts"/>
+
+<script>
+    $(document).ready(function() {
+	startTxnSuccess();
+	 $('#sidebarCollapse').on('click', function () {
+		 $('#sidebar').toggleClass('active');
+		 $(this).toggleClass('active');
+	 });
+        $('#example1').DataTable();
+	endTxnSuccess();
+    } );
+</script>
+
+<script type="text/javascript">
+//     $(document).ready( function(){
+//        $("#home").removeClass("active");
+//     });
+$(document).ready( function(){
+    $("#collapse-ecommerce").addClass("collapse show");
+ });
+
+$(document).ready( function(){
+       $("#savingsAccount").addClass("active");
+    });
+</script>
+
+</body>
+</html>

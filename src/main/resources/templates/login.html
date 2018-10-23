@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<script type="text/javascript">
+ 
+ var pageName = document.title;
+ 
+ function getUsername(){
+	 var username = document.getElementById("username").value;
+	 BrowserAgentExtension.setCustomerId({ "customerId": username , "attributes" : { "Page Name" : pageName } });
+}
+</script>
+<script type="text/javascript">
+ function startTxnSuccess(){
+           var event = {"transactionName" : "Login","serviceName" : "Authentication"};
+          BrowserAgentExtension.startApplicationTransaction(event);
+        }
+</script>
+<script type="text/javascript">
+function endTxnSuccess(){
+		var event = {"transactionName" : "Login","serviceName" : "Authentication"};
+		BrowserAgentExtension.stopApplicationTransaction(event);
+}		
+</script>
+<script type="text/javascript">
+function endTxnFail(){     
+		var event = {"transactionName" : "Login","serviceName" : "Authentication" , "failure": "Invalid username or password", "attributes" : { "k" : "v"}};
+		BrowserAgentExtension.stopApplicationTransaction(event);
+}		
+</script>
+<head th:replace="common/nheader :: common-header"/>
+<body class="layout layout-vertical layout-left-navigation layout-below-toolbar">
+<!-- Login Section -->
+<!--    <img class="img-responsive" src="/images/banner.png" alt="banner"/>  -->
+    <main>
+        <div id="wrapper">
+
+            <div class="content-wrapper">
+               
+                <div class="content custom-scrollbar">
+
+                    <div id="login" class="p-8">
+
+                        <div class="form-wrapper md-elevation-8 p-8">
+
+                            <div class="logo bg-secondary">
+                                <span>IB</span>
+                            </div>
+
+                            <div class="title mt-4 mb-8">Log in to your account</div>
+
+                            <form name="loginForm" class="form-signin" th:action="@{/login}" onsubmit="endTxnSuccess();getUsername();" method="post" >
+
+                                <div class="form-group mb-4">
+                                    <input type="text" roleId="username" name="username" class="form-control" id="username" placeholder=" " autofocus="autofocus"/>
+                                    <label for="loginFormInputUsername">Username</label>
+                                </div>
+							
+                                <div class="form-group mb-4">
+                                    <input roleId="inputPassword" type="password" class="form-control" id="password" placeholder="Password" name="password" required="required"/>
+                                    <label for="loginFormInputPassword">Password</label>
+                                </div>
+
+                                <div class="remember-forgot-password row no-gutters align-items-center justify-content-between pt-4">
+
+                                    <div class="form-check remember-me mb-4">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" name="remember-me" id="remember-me" aria-label="Remember Me" />
+                                            <span class="checkbox-icon"></span>
+                                            <span class="form-check-description">Remember Me</span>
+                                        </label>
+                                    </div>
+
+                                    <a href="#" class="forgot-password text-secondary mb-4">Forgot Password?</a>
+                                </div>
+
+                                <button type="submit" id="submit" class="submit-button btn btn-block btn-secondary my-4 mx-auto" aria-label="LOG IN">
+                                    LOG IN
+                                </button>
+
+                            </form>
+
+                            <div class="separator">
+                                <span class="text">OR</span>
+                            </div>
+
+                            <div class="register d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                                <span class="text mr-sm-2">Don't have an account?</span>
+                                <a class="link text-secondary" th:href="@{/signup}">Create an account</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<div th:replace="common/nheader :: body-bottom-scripts"/>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    startTxnSuccess();
+});
+</script>
+</html>
