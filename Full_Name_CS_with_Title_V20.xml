@@ -1,0 +1,1861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>Full_Name_CS_with_Title_V20</name>
+    <description />
+    <extended_description />
+    <trans_version />
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection />
+        <schema />
+        <table />
+        <size_limit_lines />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject />
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject />
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection />
+        <schema />
+        <table />
+        <interval />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection />
+        <schema />
+        <table />
+        <timeout_days />
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection />
+      <table />
+      <field />
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file />
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2012/03/28 12:34:54.776</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2015/02/18 10:31:23.665</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+    <notepad>
+      <note>This Mapplet handles 2 types of names 
+1) Last, First middle  (comma separated)
+2) First Middle Last  (Space separated format)
+3) Maintains original case (of full string, not of individual components)
+4) Middle name uses First name's lookup
+5) DMsuite hooks are namesd inputValue &amp; outputValue
+6) outputLength maximum is set to 30
+7) if outputValue is empty, we will set it to a single white space (PeopleSoft requirement)
+Case 1:
+1. Any and all strings before a comma are combined and considered 1 last name string
+2 First name can be up to two tokens, middle name is all following tokens.
+
+Case 2 
+1. First value is first name (John)
+2. Second values is first name 2 (if there are at least 4 values
+3. Third value is middle name (or 2nd value if there are only 3 values)
+4. Last values are last name
+5. Any and all middle values any and all strings combined is middle name
+
+Notes:
+1) Any value can be empty
+2) Case sensitivity is String wise not individual name wise
+3) For  2nd part of first name and middle name, if they are initials, we use the first character of the masked value, and
+    we preserve the "." if present. 
+</note>
+      <xloc>148</xloc>
+      <yloc>730</yloc>
+      <width>693</width>
+      <heigth>410</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <order>
+    <hop>
+      <from>Cleanup</from>
+      <to>Mapping_Algo_MapOutSpec</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>filterStep</from>
+      <to>NullCheckFilter</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Mapplet_Algo_MapInpSpec</from>
+      <to>filterStep</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Cleanup</from>
+      <to>Text file output</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>TransformCasev4Full</from>
+      <to>TrimParamters</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputLname_XML_lookUp</from>
+      <to>TransformCasev4Full</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>GetLookupKeys</from>
+      <to>inputFname_XML_lookUp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputMname_XML_lookUp 2</from>
+      <to>inputLname_XML_lookUp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>CSV file input</from>
+      <to>filterStep</to>
+      <enabled>N</enabled>
+    </hop>
+    <hop>
+      <from>inputFname_XML_lookUp</from>
+      <to>inputFname_XML_lookUp 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputFname_XML_lookUp 2</from>
+      <to>inputMname_XML_lookUp 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>NullCheckFilter</from>
+      <to>NullValueAssignment</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>NullCheckFilter</from>
+      <to>GetLookupKeys</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputValue_masked_decryptData</from>
+      <to>inputFname_XML_lookUp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputValue_masked_decryptData</from>
+      <to>inputFname_XML_lookUp 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>inputValue_masked_decryptData</from>
+      <to>inputMname_XML_lookUp 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ReadLname_XML</from>
+      <to>Lname_decryptDataFull</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lname_decryptDataFull</from>
+      <to>inputLname_XML_lookUp</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>NullValueAssignment</from>
+      <to>Cleanup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>TrimParamters</from>
+      <to>Cleanup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ReadFname_XML</from>
+      <to>inputValue_masked_decryptData</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>CSV file input</name>
+    <type>CsvInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <filename>/home/dmsuite/input/FullNameSamples.txt</filename>
+    <filename_field />
+    <rownum_field />
+    <include_filename>N</include_filename>
+    <separator>;</separator>
+    <enclosure />
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>N</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding>UTF-8</encoding>
+    <fields>
+      <field>
+        <name>inputValue</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Cleanup</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>Y</select_unspecified>
+      <remove>
+        <name>inputValue</name>
+      </remove>
+      <remove>
+        <name>filterFlag</name>
+      </remove>
+      <remove>
+        <name>commaFlag</name>
+      </remove>
+      <remove>
+        <name>caseFlag</name>
+      </remove>
+      <remove>
+        <name>inputFname</name>
+      </remove>
+      <remove>
+        <name>inputFname2</name>
+      </remove>
+      <remove>
+        <name>inputMname</name>
+      </remove>
+      <remove>
+        <name>inputLname</name>
+      </remove>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1112</xloc>
+      <yloc>116</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>GetLookupKeys</name>
+    <type>Janino</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <formula>
+      <field_name>inputLname_lkUpKey</field_name>
+      <formula_string>com.masking.encryption.Encryption.getLookupKey(inputLname.toUpperCase(),10000,  "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <formula>
+      <field_name>inputFname_lkUpKey</field_name>
+      <formula_string>com.masking.encryption.Encryption.getLookupKey(inputFname.toUpperCase(),5000,  "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <formula>
+      <field_name>inputMname_lkUpKey</field_name>
+      <formula_string>com.masking.encryption.Encryption.getLookupKey(inputMname.toUpperCase(),5000, "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <formula>
+      <field_name>inputFname2_lkUpKey</field_name>
+      <formula_string>com.masking.encryption.Encryption.getLookupKey(inputFname2.toUpperCase(),5000,  "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Lname_decryptDataFull</name>
+    <type>Janino</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <formula>
+      <field_name>inputLname_masked</field_name>
+      <formula_string>com.masking.encryption.Encryption.decrypt(inputValue_XML_value, "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Mapping_Algo_MapOutSpec</name>
+    <type>MappingOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1110</xloc>
+      <yloc>25</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Mapplet_Algo_MapInpSpec</name>
+    <type>MappingInput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <field>
+        <name>inputValue</name>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>16</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>NullCheckFilter</name>
+    <type>FilterRows</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <send_true_to>GetLookupKeys</send_true_to>
+    <send_false_to>NullValueAssignment</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>filterFlag</leftvalue>
+            <function>=</function>
+            <rightvalue />
+            <value>
+              <name>constant</name>
+              <type>Integer</type>
+              <text>0</text>
+              <length>-1</length>
+              <precision>0</precision>
+              <isnull>N</isnull>
+              <mask>#;-#</mask>
+            </value>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>NullValueAssignment</name>
+    <type>Janino</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <formula>
+      <field_name>outputValue</field_name>
+      <formula_string>inputValue</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>112</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ReadFname_XML</name>
+    <type>getXMLData</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <include>N</include>
+    <include_field />
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum_field />
+    <encoding>UTF-8</encoding>
+    <file>
+      <name />
+      <filemask />
+      <exclude_filemask />
+      <file_required>Y</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>/var/delphix/dmsuite/SL_XML/FIRST_NM.xml</name>
+      <filemask />
+      <exclude_filemask />
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>inputFname_XML_id</name>
+        <xpath>@id</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>Y</repeat>
+      </field>
+      <field>
+        <name>inputFname_XML_value</name>
+        <xpath>@value</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>Y</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/rows/row</loopxpath>
+    <IsInFields>N</IsInFields>
+    <IsAFile>Y</IsAFile>
+    <XmlField>FN_XML_FILE</XmlField>
+    <prunePath>/rows/row</prunePath>
+    <shortFileFieldName />
+    <pathFieldName />
+    <hiddenFieldName />
+    <lastModificationTimeFieldName />
+    <uriNameFieldName />
+    <rootUriNameFieldName />
+    <extensionFieldName />
+    <sizeFieldName />
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>320</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>ReadLname_XML</name>
+    <type>getXMLData</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <include>N</include>
+    <include_field />
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
+    <rownum_field />
+    <encoding>UTF-8</encoding>
+    <file>
+      <name />
+      <filemask />
+      <exclude_filemask />
+      <file_required>Y</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name>/var/delphix/dmsuite/SL_XML/LAST_NM.xml</name>
+      <filemask />
+      <exclude_filemask />
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>inputLname_XML_id</name>
+        <xpath>@id</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>Y</repeat>
+      </field>
+      <field>
+        <name>inputValue_XML_value</name>
+        <xpath>@value</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>Y</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>/rows/row</loopxpath>
+    <IsInFields>N</IsInFields>
+    <IsAFile>Y</IsAFile>
+    <XmlField>FN_XML_FILE</XmlField>
+    <prunePath>/rows/row</prunePath>
+    <shortFileFieldName />
+    <pathFieldName />
+    <hiddenFieldName />
+    <lastModificationTimeFieldName />
+    <uriNameFieldName />
+    <rootUriNameFieldName />
+    <extensionFieldName />
+    <sizeFieldName />
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1056</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Text file output</name>
+    <type>TextFileOutput</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <separator>;</separator>
+    <enclosure>"</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding>UTF-8</encoding>
+    <endedLine />
+    <fileNameInField>N</fileNameInField>
+    <fileNameField />
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>/home/dmsuite/output/FullNameResults</name>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <extention>txt</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>Y</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format />
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+      <field>
+        <name>outputValue</name>
+        <type>String</type>
+        <format />
+        <currency />
+        <decimal />
+        <group />
+        <nullif />
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1118</xloc>
+      <yloc>418</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>TransformCasev4Full</name>
+    <type>ScriptValueMod</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+outputTitle = "";
+outputFname = "";
+outputFname2 = "";
+outputMname = "";
+outputLname = "";
+outputValue = "";
+
+if (null != inputMname &amp;&amp; !isEmpty(inputMname) &amp;&amp; inputMname!="")
+{
+	// check for single character middle name
+	if (inputMname.length==1 || (inputMname.length==2 &amp;&amp; inputMname.charAt(1) == "." ) )
+	{
+		//just use the first initial of the masked string
+		inputMname_masked = substr(inputMname_masked,0,1);
+		inputMname_masked =  inputMname_masked.charAt(1)=="."?inputMname_masked+".":inputMname_masked;
+	}
+
+}
+
+if (null != inputFname2 &amp;&amp; !isEmpty(inputFname2) &amp;&amp; inputFname2 !="")
+{
+	// check for single character first name 2
+	if (inputFname2.length==1 || (inputFname2.length==2 &amp;&amp; inputFname2.charAt(1) == "." ) )
+	{
+		//use first initial of masked value
+		inputFname2_masked = substr(inputFname2_masked,0,1);
+		inputFname2_masked =  inputFname2_masked.charAt(1)=="."?inputFname2_masked+".":inputFname2_masked;
+	}
+}
+
+/* Note we don't treat first name initials the same as middle name or fname 2 initials */
+
+//Changing case
+if(caseFlag == 1 )	
+{
+	outputTitle = outputTitle.toUpperCase(); //uppercase
+	outputFname = inputFname_masked.toUpperCase(); //uppercase
+	outputFname2 = inputFname2_masked.toUpperCase(); //uppercase
+	outputMname = inputMname_masked.toUpperCase(); //uppercase
+	outputLname = inputLname_masked.toUpperCase(); //uppercase
+}
+else if(caseFlag == -1 )	
+{
+	outputTitle = outputTitle.toLowerCase(); //lowercase
+	outputFname = inputFname_masked.toLowerCase(); //lowercase
+	outputFname2 = inputFname2_masked.toLowerCase(); //lowercase
+	outputMname = inputMname_masked.toLowerCase(); //lowercase
+	outputLname = inputLname_masked.toLowerCase(); //lowercase
+}
+// assume Mixed case is used in lookup file
+else	
+{
+	
+	outputFname = inputFname_masked; //Sentencecase
+	outputFname2 = inputFname2_masked; //Sentencecase
+	outputMname = inputMname_masked; //Sentencecase
+	outputLname = inputLname_masked; //Sentencecase
+}
+
+
+// Concatatenating fnames and lnames based on comma
+if (commaFlag==1)    
+{
+	outputValue = outputLname + ",";
+	if (trim(outputTitle).length) {
+		outputValue = outputValue + " " + outputTitle;
+	}
+	if (trim(outputFname).length) {
+		outputValue = outputValue + " " + outputFname;
+	}
+	if (trim(outputFname2).length) {
+		outputValue = outputValue + " " + outputFname2;
+	}
+	if (trim(outputMname).length) {
+		outputValue = outputValue + " " + outputMname;
+	}
+
+}    
+else    
+{
+	outputValue = outputFname;
+	if (trim(outputTitle).length) {
+		outputValue = outputValue + " " + outputTitle;
+	}
+	if (trim(outputFname2).length) {
+		outputValue = outputValue + " " + outputFname2;
+	}
+	if (trim(outputMname).length) {
+		outputValue = outputValue + " " + outputMname;
+	}
+	if (trim(outputLname).length) {
+		outputValue = outputValue + " " + outputLname;
+	}
+}
+
+//truncate  outputValue to maximum outputLength
+outputValue = trim(outputValue.substr(0,outputLength));
+
+// if output value is empty, make sure it is set to one space character (PeopleSoft)
+outputValue =  trim(outputValue).length==0?" ":outputValue;
+
+</jsScript_script>
+      </jsScript>
+      <jsScript>
+        <jsScript_type>1</jsScript_type>
+        <jsScript_name>Item_0</jsScript_name>
+        <jsScript_script>//Script here
+
+var outputFname = "";
+var outputFname2 = "";
+var outputMname = "";
+var outputLname = "";
+var outputValue = "";
+var outputLength = 30;</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>outputValue</name>
+        <rename>outputValue</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>944</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>TrimParamters</name>
+    <type>SelectValues</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <fields>
+      <select_unspecified>N</select_unspecified>
+      <remove>
+        <name>inputLname_lkUpKey</name>
+      </remove>
+      <remove>
+        <name>inputFname_lkUpKey</name>
+      </remove>
+      <remove>
+        <name>inputMname_lkUpKey</name>
+      </remove>
+      <remove>
+        <name>inputFname2_lkUpKey</name>
+      </remove>
+      <remove>
+        <name>inputFname_masked</name>
+      </remove>
+      <remove>
+        <name>inputFname2_masked</name>
+      </remove>
+      <remove>
+        <name>inputMname_masked</name>
+      </remove>
+      <remove>
+        <name>inputLname_masked</name>
+      </remove>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1040</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>filterStep</name>
+    <type>ScriptValueMod</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+filterFlag=0;
+commaFlag=0;
+caseFlag=0;
+
+i=0;
+inputTitle = "";
+inputFname = "";
+inputFname2 = "";
+inputMname = "";
+inputLname = "";
+
+
+tmpStr   = "";
+resSpace = "";
+resMiddle= "";
+resComma = "";
+
+//Script here
+
+
+
+//Check for NULL
+
+if (null == inputValue || trim(inputValue)=="")
+{
+	filterFlag = -1;
+}
+else
+{	
+	inputValue = ltrim(rtrim(inputValue));
+	//Check for case
+	if(inputValue == inputValue.toUpperCase() )
+	{
+		caseFlag = 1;  // uppercase
+	}
+	else if (inputValue == inputValue.toLowerCase() )
+	{
+		caseFlag = -1;  // lowercase
+	}
+	else
+	{
+    	caseFlag = 0;  // Sentence case
+	}
+
+	//Check for comma &amp; split values
+
+	strRegName = "^([^,]*)\\s*,\\s*([^ ]*)\\s*([^ ]*)\\s*([^~]*)$"; //Matches Last Name comma First Name - 4 Groups.
+	strRegName2 = "^([^ ]*)\\s*([^ ]*)\\s*([^ ]*)\\s*([^~]*)$"; //Matches any characters except spaces, then grouped by non-whitespace. 4 Groups
+	
+	NameArr =  str2RegExp(inputValue, strRegName);
+
+	inputFname = inputValue; // set inputFname to input value in case there is only one name
+
+	if ( NameArr != null ) {
+    	commaFlag = 1;
+		if (!isEmpty(NameArr[3])) {
+				inputTitle= NameArr[0];
+				inputLname= NameArr[1];
+				inputFname= NameArr[2];
+				inputFname2= NameArr[3];
+				inputMname= NameArr[4];
+		} else if (!isEmpty(NameArr[2])) {
+				inputTitle= NameArr[0];				
+				inputLname= NameArr[1]; //last,first middle
+				inputFname = NameArr[2];
+				inputMname = NameArr[3];
+		} else if (!isEmpty(NameArr[1])) {
+				inputTitle= NameArr[0];				
+				inputLname= NameArr[1]; //last,first
+				inputFname = NameArr[2];
+		} else if (!isEmpty(NameArr[1])) {
+				inputLName = NameArr[1];
+		}
+				            
+              
+    } 
+	else {
+		NameArr =  str2RegExp(inputValue, strRegName2);
+        if ( NameArr != null ) {
+    		commaFlag = 0;
+			if (!isEmpty(NameArr[4])) {
+
+				resSpace = NameArr[4].split(" ");					
+				if (resSpace.length > 1) {
+			
+					resMiddle = resSpace[0];
+					for (i=1; i &lt; resSpace.length-1;i++)
+					resMiddle = resMiddle + " " + resSpace[i];
+				
+					inputLname=resSpace[resSpace.length-1];
+					inputMname = NameArr[3] + " " + resMiddle;	
+				}
+				else {
+					inputLname = NameArr[4];
+					inputMname = NameArr[3];
+				}
+						
+				inputFname= NameArr[1];
+				inputFname2= NameArr[2];
+
+			} else if (!isEmpty(NameArr[3])) {
+				inputLname= NameArr[3]; //last,first middle
+				inputFname = NameArr[1];
+				inputMname = NameArr[2];
+			} else if (!isEmpty(NameArr[2])) {
+				inputLname= NameArr[2]; //last,first
+				inputFname = NameArr[1];
+			} else if (!isEmpty(NameArr[1])) {
+				inputFName = NameArr[1];
+			}
+ 
+        }
+
+	}
+
+
+}//main Else
+</jsScript_script>
+      </jsScript>
+      <jsScript>
+        <jsScript_type>1</jsScript_type>
+        <jsScript_name>Item_0</jsScript_name>
+        <jsScript_script>//this is the start script
+
+var filterFlag=0;
+var commaFlag=0;
+var caseFlag=0;
+
+var i=0;
+var inputTitle = "";
+var inputFname = "";
+var inputFname2 = "";
+var inputMname = "";
+var inputLname = "";
+
+
+var tmpStr   = "";
+var resSpace = "";
+var resMiddle= "";
+var resComma = "";
+
+var strRegName = "";
+var strRegName2 ="";
+var NameArr = null;</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>filterFlag</name>
+        <rename>filterFlag</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>commaFlag</name>
+        <rename>commaFlag</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>caseFlag</name>
+        <rename>caseFlag</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>inputFname</name>
+        <rename>inputFname</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>inputFname2</name>
+        <rename>inputFname2</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>inputMname</name>
+        <rename>inputMname</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>inputLname</name>
+        <rename>inputLname</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>inputTitle</name>
+        <rename>inputTitle</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>80</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inputFname_XML_lookUp</name>
+    <type>StreamLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <from>inputValue_masked_decryptData</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>inputFname_lkUpKey</name>
+        <field>inputFname_XML_id</field>
+      </key>
+      <value>
+        <name>inputFname_masked</name>
+        <rename>inputFname_masked</rename>
+        <default />
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inputFname_XML_lookUp 2</name>
+    <type>StreamLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <from>inputValue_masked_decryptData</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>inputFname2_lkUpKey</name>
+        <field>inputFname_XML_id</field>
+      </key>
+      <value>
+        <name>inputFname_masked</name>
+        <rename>inputFname2_masked</rename>
+        <default />
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inputLname_XML_lookUp</name>
+    <type>StreamLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <from>Lname_decryptDataFull</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>inputLname_lkUpKey</name>
+        <field>inputLname_XML_id</field>
+      </key>
+      <value>
+        <name>inputLname_masked</name>
+        <rename>inputLname_masked</rename>
+        <default />
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>848</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inputMname_XML_lookUp 2</name>
+    <type>StreamLookup</type>
+    <description />
+    <distribute>Y</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <from>inputValue_masked_decryptData</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>N</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>Y</integer_pair>
+    <lookup>
+      <key>
+        <name>inputMname_lkUpKey</name>
+        <field>inputFname_XML_id</field>
+      </key>
+      <value>
+        <name>inputFname_masked</name>
+        <rename>inputMname_masked</rename>
+        <default />
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>inputValue_masked_decryptData</name>
+    <type>Janino</type>
+    <description />
+    <distribute>N</distribute>
+    <custom_distribution />
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name />
+    </partitioning>
+    <formula>
+      <field_name>inputFname_masked</field_name>
+      <formula_string>com.masking.encryption.Encryption.decrypt(inputFname_XML_value, "/var/delphix/dmsuite/resources/keys/RawBytes.dat", "/var/delphix/dmsuite/resources/keys/KeyStore.dat", "/var/delphix/dmsuite/resources/keys/Alias.dat")</formula_string>
+      <value_type>String</value_type>
+      <value_length>-1</value_length>
+      <value_precision>-1</value_precision>
+      <replace_field />
+    </formula>
+    <attributes />
+    <cluster_schema />
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>576</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+    <error>
+      <source_step>filterStep</source_step>
+      <target_step>NullValueAssignment</target_step>
+      <is_enabled>N</is_enabled>
+      <nr_valuename />
+      <descriptions_valuename />
+      <fields_valuename />
+      <codes_valuename />
+      <max_errors>0</max_errors>
+      <max_pct_errors />
+      <min_pct_rows />
+    </error>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes />
+</transformation>
